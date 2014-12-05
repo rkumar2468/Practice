@@ -1,5 +1,9 @@
-gcc -ggdb bins.c -o BinarySearch
+# gcc -ggdb bins.c -o bin/BinarySearch
 
-chmod +x BinarySearch
+make clean
 
-./BinarySearch
+make 
+
+chmod +x bin/BinarySearch
+
+./bin/BinarySearch
