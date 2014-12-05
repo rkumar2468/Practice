@@ -1,0 +1,5 @@
+gcc -ggdb bins.c -o BinarySearch
+
+chmod +x BinarySearch
+
+./BinarySearch

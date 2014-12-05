@@ -1,0 +1,11 @@
+CFLAGS=-c -Wall -I. 
+DEBUG=-ggdb -g -gdwarf-2
+GCC=/usr/bin/gcc
+
+all: BinarySearch
+
+BinarySearch: bins.c
+	$(GCC) $(CFLAGS) $(DEBUG) bins.c -o BinarySearch
+
+clean:
+	rm -rf *.o BinarySearch 
