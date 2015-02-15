@@ -12,7 +12,6 @@ def buyLotsOfFruit(orderList):
     return sum(count)
     #print count
 
-
 if __name__ == '__main__':
     orderList = [('apple',2),('orange',2),('lemon',3)]
     # count = buyLotsOfFruit(orderList)
