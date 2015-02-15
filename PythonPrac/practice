@@ -1,0 +1,19 @@
+# This pragram is to just practice the existing datastructures in python
+
+# array = [1, 2, 3, 5, 4, 3]
+
+# for i in array:fifif
+#    print i
+
+fruits = {'apple':1.00, 'orange':1.5, 'peaches':1.75}
+
+def buyLotsOfFruit(orderList):
+    count = [x * fruits[f2] for (f2,x) in orderList if f2 in fruits]
+    return sum(count)
+    #print count
+
+
+if __name__ == '__main__':
+    orderList = [('apple',2),('orange',2),('lemon',3)]
+    # count = buyLotsOfFruit(orderList)
+    print 'Cost of', orderList, 'is', buyLotsOfFruit(orderList)
