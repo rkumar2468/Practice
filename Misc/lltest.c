@@ -16,7 +16,8 @@ int main(){
 	// reverse(&ll);
 	// addNumToLL(&ll, 1, 19);
 	// facebookRec(&ll);
-	reverseUpdt(&ll);
+	// reverseUpdt(&ll);
+	reverseLLW(&ll, 3, NULL);
 	printLL(ll);
 	return 0;
 }

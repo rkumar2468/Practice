@@ -16,3 +16,4 @@ void insertSorted(Node **head, int data);
 void addNumToLL(Node **head, int data, int sum);
 void facebookRec(Node **head);
 void reverseUpdt(Node **head);
+void reverseLLW(Node **head, int window, Node *parent);

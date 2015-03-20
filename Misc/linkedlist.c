@@ -222,3 +222,33 @@ void reverseUpdt(Node **head)
 	if (prev != NULL )
 		*head = prev;
 }
+// Given a linked list and a window //
+// reverse the windowed elements of that list //
+// For Eg: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> NULL //
+// Say window = 3 //
+// Solution: 3 -> 2 -> 1 -> 6 -> 5 -> 4 -> 9 -> 8 -> 7 -> NULL //
+
+void reverseLLW(Node **head, int window, Node *parent)
+{
+	if(*head == NULL) return;
+	Node *temp = (*head)->next;
+	Node *prev = *head;
+	Node *tmp = NULL;
+	int count = 0;
+	if (temp == NULL) return;
+	while(count < window-1 && temp != NULL)
+	{
+		tmp = temp->next;
+		temp->next = prev;
+		prev = temp;
+		temp = tmp;
+		count++;
+	}
+	(*head)->next = tmp;
+	temp = *head;
+	*head = prev;
+	if (parent != NULL)
+		parent->next = *head;
+	if (tmp == NULL) return;
+	reverseLLW(&tmp, window, temp);
+}
