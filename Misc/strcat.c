@@ -3,9 +3,21 @@
 */
 #include <stdio.h>
 
+int strlen1(char *s)
+{
+	int count = 0;
+	while(*s != '\0')
+	{
+		count++;
+		s++;
+	}
+	return count;
+}
+
 char *strcat1(char *s1, char *s2)
 {
-	char *temp = malloc(1);
+	int len = strlen1(s1) + strlen2(s2);
+	char *temp = malloc(len);
 	char *res = temp;
 	while(*s1 != '\0')
 	{	
